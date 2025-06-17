@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-      stage('Checkout') {
+        stage('Checkout') {
             steps {
                 checkout scm
             }
@@ -30,12 +30,11 @@ pipeline {
         }
 
         stage('Deploy to Minikube') {
-    steps {
-        withEnv(['KUBECONFIG=C:\\ProgramData\\Jenkins\\.kube\\config']) {
-            bat 'kubectl apply -f k8s-deployment.yaml'
+            steps {
+                withEnv(['KUBECONFIG=C:\\ProgramData\\Jenkins\\.kube\\config']) {
+                    bat 'kubectl apply -f k8s-deployment.yaml'
+                }
+            }
         }
     }
-
-    } 
-   }
- }
+}
