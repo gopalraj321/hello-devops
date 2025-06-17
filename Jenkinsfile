@@ -6,9 +6,9 @@ pipeline {
     }
 
     stages {
-        stage('Clone') {
+      stage('Checkout') {
             steps {
-                git 'https://github.com/yourusername/hello-devops.git'
+                checkout scm
             }
         }
 
