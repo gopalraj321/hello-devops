@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello-devops
-        image: yourdockerhubusername/hello-devops:latest
+        image: gopalraj321/hello-devops:latest
         ports:
         - containerPort: 3000
 ---
